@@ -31,6 +31,7 @@
                 @Html.DisplayFor(modelItem => item.DefaultDays)
             </td>
             <td>
+                    <button data-id="@item.Id" class="btn btn-primary allocateBtn" type="button"> Allocate Leave </button>
                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
                     <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info"><i class="fa-solid fa-circle-info"></i></a>
                     @*<a asp-action="Delete" asp-route-id="@item.Id">Delete</a>*@
@@ -45,11 +46,13 @@
     <input type="hidden" id="leaveTypeId" name="Id"/>
 </form>
 
+<form id="allocationForm" asp-action="AllocateLeave">
+    <input type="hidden" id="leaveTypeIdAllocation" name="Id"/>
+</form>
+
 
 @section Scripts{
     <script>
-
-        new DataTable('.table');
 
         $(function () {
 
@@ -66,6 +69,24 @@
                         var id = btn.data("id");
                         $('#leaveTypeId').val(id);
                         $('#deleteForm').submit();
+                    }
+                });
+            });
+
+
+            $('.allocateBtn').click(function (e) {
+                swal({
+                    title: "Are you sure?",
+                    text: "Are you sure you want to allocation this leave to all employees?",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true
+                }).then((confirm) => {
+                    if (confirm) {
+                        var btn = $(this);
+                        var id = btn.data("id");
+                        $('#leaveTypeIdAllocation').val(id);
+                        $('#allocationForm').submit();
                     }
                 });
             });
