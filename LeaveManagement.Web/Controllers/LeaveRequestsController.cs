@@ -76,7 +76,7 @@ namespace LeaveManagement.Web.Controllers
             {
                 throw;
             }
-            RedirectToAction(nameof(MyLeave));
+            return RedirectToAction(nameof(MyLeave));
         }
 
         // GET: LeaveRequests/Create
@@ -106,7 +106,7 @@ namespace LeaveManagement.Web.Controllers
                     {
                         return RedirectToAction(nameof(MyLeave));
                     }
-                    ModelState.AddModelError(string.Empty,"You Have Exceeded Your Allocation With This Request.")
+                    ModelState.AddModelError(string.Empty, "You Have Exceeded Your Allocation With This Request.");
                 }
             }
             catch(Exception ex)
