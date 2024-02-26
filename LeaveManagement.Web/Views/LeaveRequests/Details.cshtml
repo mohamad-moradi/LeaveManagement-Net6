@@ -81,20 +81,20 @@
     {  
         <div class="row">
             <form class="col-4 form-inline" asp-action="ApproveRequest">
-            <input name="Id" value="@Model.Id" type="hidden"/>
-            <input name="approved" value="true" type="hidden"/>
-            <button type="submit" class="btn btn-outline-success">Approve</button>
-        </form>
+                <input name="Id" value="@Model.Id" type="hidden"/>
+                <input name="approved" value="true" type="hidden"/>
+                <button type="submit" class="btn btn-outline-success">Approve</button>
+            </form>
 
-        <form class="col-4 form-inline" asp-action="ApproveRequest">
-            <input name="Id" value="@Model.Id" type="hidden"/>
-            <input name="approved" value="false" type="hidden"/>
-            <button type="submit" class="btn btn-outline-danger">Rejecte</button>
-        </form>
+            <form class="col-4 form-inline" asp-action="ApproveRequest">
+                <input name="Id" value="@Model.Id" type="hidden"/>
+                <input name="approved" value="false" type="hidden"/>
+                <button type="submit" class="btn btn-outline-danger">Rejecte</button>
+            </form>
 
-        <a asp-action="Index" class="btn btn-outline-dark col-2">
-            Back to List
-        </a>
+            <a asp-action="Index" class="btn btn-outline-dark col-2">
+                Back to List
+            </a>
         </div>
     }
 

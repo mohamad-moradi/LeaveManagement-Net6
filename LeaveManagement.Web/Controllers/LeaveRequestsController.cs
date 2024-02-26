@@ -66,11 +66,11 @@ namespace LeaveManagement.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Cancle(int leaveRequestId)
+        public async Task<IActionResult> Cancel(int Id)
         {
             try
             {
-                await leaveRequestRepository.CancleLeaveRequest(leaveRequestId);
+                await leaveRequestRepository.CancelLeaveRequest(Id);
             }
             catch(Exception ex)
             {
