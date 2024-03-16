@@ -12,7 +12,7 @@ namespace LeaveManagement.Data.Configurations.entities
             builder.HasData(
                 new Employee
                 {
-                    Id = "cdafcf88-1dd4-4f36-8961-7c8df2f2da5a",
+                    Id = "429f46f1-569b-4f3c-bc41-7b23a5ca38f2",
                     Email = "admin@localhost.com",
                     NormalizedEmail = "ADMIN@LOCALHOST.COM",
                     UserName = "admin@localhost.com",

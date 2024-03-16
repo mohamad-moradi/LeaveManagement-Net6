@@ -211,12 +211,20 @@
 
                         @if (User.IsInRole(Roles.User))
                         {
-
-                            <li class="nav-item">
-                                <a class="nav-link text-white" asp-area="" asp-controller="LeaveRequests" asp-action="Create">Applay For Leave</a>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                   asp-area="" asp-controller="LeaveRequests" asp-action="Create">
+                                    <i class="fa-solid fa-plus"></i>
+                                    <span class="hide-menu">Applay For Leave</span>
+                                </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" asp-area="" asp-controller="LeaveRequests" asp-action="MyLeave">My Leave</a>
+
+                            <li class="sidebar-item">
+                                <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                   asp-area="" asp-controller="LeaveRequests" asp-action="MyLeave">
+                                    <i class="fa-solid fa-rectangle-list"></i>
+                                    <span class="hide-menu">My Leave</span>
+                                </a>
                             </li>
                         }
 

@@ -108,7 +108,7 @@ namespace LeaveManagement.Application.Repository
                 TotalRequests = leaveRequests.Count(),
                 ApprovedRequests = leaveRequests.Count(q => q.Approved == true),
                 RejectedRequests = leaveRequests.Count(q => q.Approved == false),
-                PendingRequests = leaveRequests.Count(q => q.Approved == null),
+                PendingRequests = leaveRequests.Count(q => q.Approved == null && q.Cancelled == false),
                 LeaveRequests = mapper.Map<List<LeaveRequestVM>>(leaveRequests)
             };
 

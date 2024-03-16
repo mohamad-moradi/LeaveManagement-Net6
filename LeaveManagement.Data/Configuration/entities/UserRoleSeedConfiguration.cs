@@ -12,7 +12,7 @@ namespace LeaveManagement.Data.Configurations.entities
                 new IdentityUserRole<string>
                 {
                     RoleId = "4cbe24dd-d50e-42ae-9314-7c1b04056746",
-                    UserId = "408aa945-3d84-4421-8342-7269ec64d949"
+                    UserId = "429f46f1-569b-4f3c-bc41-7b23a5ca38f2"
                 },
                 new IdentityUserRole<string>
                 {
